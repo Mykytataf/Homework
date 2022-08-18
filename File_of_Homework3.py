@@ -1,4 +1,4 @@
-from typing import _ProtocolMeta
+
 
 
 print('Введіть хвилини')
