@@ -1,26 +1,15 @@
-inp = 3
+inp = 12
 def time_of_year(num_of_month):
     Dict_of_year = {
-        "December" : 12,
-        "January" : 1,
-        "February" : 2,
-        "March" : 3,
-        "April" : 4,
-        "May" : 5,
-        "Juny" : 6,
-        "July" : 7,
-        "August" : 8,
-        "September" : 9,
-        "October" : 10,
-        "November" : 11
+        "Winter" : {12, 1, 2}, 
+        "Spring" : {3, 4, 5},
+        "Summer" : {6,7,8},
+        "Autumn" : {9,10,11}
     }
-    
-    Dict_of_year2 = {"month" : num_of_month}
-    
-    Winter = Dict_of_year2["month"] == Dict_of_year["December" or "January" or "February"]
-    Spring = Dict_of_year2["month"] == Dict_of_year["March" or "April" or "May"]
-    Summer = Dict_of_year2["month"] == Dict_of_year["Juny" or "July" or "August"]
-    Autumn = Dict_of_year2["month"] == Dict_of_year["September" or "October" or "November"]
+    Winter = num_of_month == Dict_of_year["Winter"]
+    Spring = num_of_month == Dict_of_year["Spring"]
+    Summer = num_of_month == Dict_of_year["Summer"]
+    Autumn = num_of_month == Dict_of_year["Autumn"] 
     if(Winter == True): 
         return("This month in Winter")
     elif(Spring == True):
@@ -29,5 +18,7 @@ def time_of_year(num_of_month):
         return("This month in Summer")
     elif(Autumn == True):
         return("This month in Autumn")
+    else:
+        return("Что-то тут не так")
 Obj = time_of_year(inp)
 print(Obj)
